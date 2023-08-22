@@ -391,7 +391,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project7-Adventure-Works-Data-Analysis/assets/92262753/bc6c59d1-f28b-49a9-9f4f-dcb3ba22cc27)
 
--- 17) Using a pivot table to find the number of employees under each sales YTD range based on TerritoryID.
+#### 17) Using a pivot table to find the number of employees under each sales YTD range based on TerritoryID.
 ```
 with cte as
 			(select distinct sp.BusinessEntityID, cr.name,
@@ -526,7 +526,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project7-Adventure-Works-Data-Analysis/assets/92262753/93bf0f49-01b5-434e-9441-bca3273e3382)
 
-### 22) Total revenue generated from each store.
+#### 22) Total revenue generated from each store.
 ```
 select tbl1.CustomerID, tbl1.PersonType, tbl1.StoreID, tbl1.StoreName, tbl1.TotalRevenue from
 	(select c.CustomerID, p.PersonType ,s.BusinessEntityID as StoreID, s.Name as StoreName, format(SUM(soh.TotalDue), 'C') as TotalRevenue,
@@ -673,7 +673,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project7-Adventure-Works-Data-Analysis/assets/92262753/12108fea-0e23-44b4-8b49-9c1c479e0471)
 
-### 30) The Total number of products which are purchased Vs those which are manufactured in-house.
+#### 30) The Total number of products which are purchased Vs those which are manufactured in-house.
 ```
 with cte as 
 (select case when MakeFlag = 0 then 'Total Number Of Purchased Products' 
