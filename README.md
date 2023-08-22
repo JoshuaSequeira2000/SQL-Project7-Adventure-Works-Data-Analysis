@@ -155,7 +155,7 @@ GO
 ```
 ![image](https://github.com/JoshuaSequeira2000/SQL-Project7-Adventure-Works-Data-Analysis/assets/92262753/cb57d4cf-c2d6-49b5-926d-4d27487a8d5a)
 
--- 5) Stored procedure to update the employee's personal information.
+#### 5) Stored procedure to update the employee's personal information.
 ```
 create proc Update_Employee_Personal_Info
 (@BusinessEntityID int, @NationalIDNumber int, @BirthDate date, @MaritalStatus nchar(1), @Gender nchar(1)) as -- Stores the necessary information needed to update employee personal information.
