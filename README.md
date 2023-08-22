@@ -498,6 +498,7 @@ from Year_Month_Orders
 order by OrderYear, OrderMonthNumber
 GO
 ```
+![image](https://github.com/JoshuaSequeira2000/SQL-Project7-Adventure-Works-Data-Analysis/assets/92262753/a26e9721-811d-4c06-b07e-2b219d13ec07)
 
 #### 20) Total number of orders placed by sales executive Vs. customers online.
 ```
@@ -508,6 +509,7 @@ from [Sales].[SalesOrderHeader]
 group by OnlineOrderFlag
 GO
 ```
+![image](https://github.com/JoshuaSequeira2000/SQL-Project7-Adventure-Works-Data-Analysis/assets/92262753/b9b94f0b-08b8-443b-9d51-59d299f75555)
 
 #### 21) Total sales each year for all territories.
 ```
@@ -522,7 +524,7 @@ inner join [Sales].[SalesOrderHeader] o on t.TerritoryID = o.TerritoryID
 group by t.TerritoryID, t.Name, t.CountryRegionCode, t.GroupName, YEAR(OrderDate)
 GO
 ```
-
+![image](https://github.com/JoshuaSequeira2000/SQL-Project7-Adventure-Works-Data-Analysis/assets/92262753/93bf0f49-01b5-434e-9441-bca3273e3382)
 
 ### 22) Total revenue generated from each store.
 ```
@@ -537,6 +539,7 @@ select tbl1.CustomerID, tbl1.PersonType, tbl1.StoreID, tbl1.StoreName, tbl1.Tota
 order by tbl1.TotalRevenue1 desc
 GO
 ```
+![image](https://github.com/JoshuaSequeira2000/SQL-Project7-Adventure-Works-Data-Analysis/assets/92262753/9f624179-76fa-4ce3-b595-8787df42a04a)
 
 #### 23) Total revenue generated from each customer.
 ```
@@ -552,7 +555,7 @@ where tbl1.PersonType = 'IN' -- Filtering for only customers
 order by tbl1.TotalRevenue1 desc
 GO
 ```
-
+![image](https://github.com/JoshuaSequeira2000/SQL-Project7-Adventure-Works-Data-Analysis/assets/92262753/a3ac2795-be9f-41a8-bb43-f1205673a016)
 
 #### 24) Number of products sold for each sales reason along with the revenue generated for each sales reason.
 ```
@@ -564,9 +567,10 @@ group by sr.Name, sr.ReasonType
 order by sr.Name
 GO
 ```
+![image](https://github.com/JoshuaSequeira2000/SQL-Project7-Adventure-Works-Data-Analysis/assets/92262753/c27e6eef-8d05-4c84-ac3e-cad8b4aa96e8)
 
 #### Views
-#### 25) Individual customers details that purchase Adventure Works Cycles products online.
+#### 25) Individual customers' details that purchase Adventure Works Cycles products online.
 ```
 create view ViewCustomerDetails as
 select p.BusinessEntityID, p.Title, p.FirstName, p.MiddleName, p.LastName, p.Suffix, pp.PhoneNumber, 
